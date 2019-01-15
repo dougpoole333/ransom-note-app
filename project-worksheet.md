@@ -21,7 +21,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 Ransom Note Generator.
 
-App takes user input and converts each letter into a text component, each randomly and legibly styled using the google fonts api and the color scheme api.  The end result is a renderscreen resembling a ransom note which, in a post-mvp version, can be converted to an image file and shared to various social media.
+App takes user input and converts each letter into a text component, each randomly and legibly styled using the google fonts api and the color scheme api.  The end result is a renderscreen resembling a ransom note.  In post-mvp versions, can be converted to an image file and shared to various social media, and user can access CSS text styling info to be used in other web dev projects.
 
 https://drive.google.com/file/d/0B-nmbX0rBb-XcElQMUpheTNGUl9jckV2VFMxUHduUUhfYlVn/view?usp=sharing
 
@@ -52,14 +52,17 @@ https://drive.google.com/file/d/0B-nmbX0rBb-XZWxUQW1mekdlN1Z1aXVJMDlpdEEtSmc0OXZ
 - Utilizes two APIs
 	- Google Fonts: https://developers.google.com/fonts/docs/developer_api?apix_params=%7B%22sort%22%3A%22alpha%22%7D
 	- The Color API (schemes): http://www.thecolorapi.com/docs
-- 
+- User text input renders as a collection of letter components, each with unique color and font styling.
 
 #### PostMVP 
 
--Responsive Design
--Additional Post-MVP CSS
--HTML -> IMAGE conversion
--Social media sharing
+-When user clicks a certain letter component, the rest of the text renders with that components styling.<br>
+-Sidebar displaying CSS code 
+-Backshadow, embossing, other style parameters<br>
+-Responsive Design<br>
+-Additional Post-MVP CSS<br>
+-HTML -> IMAGE conversion<br>
+-Social media sharing<br>
 
 ## React Architectural Design
 
