@@ -6,7 +6,8 @@ class App extends Component {
   constructor(){
     super()
     this.state ={
-      UserInput: ""
+      userInput: "",
+      letters: []
     }
   }
 
