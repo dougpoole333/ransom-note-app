@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 .App-header {
@@ -11,4 +13,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.render-screen{
+  background-color: blue;
+  height: 100%;
+  width: 90%;
+  align-content: center;
+  margin: 0 auto;
 }
