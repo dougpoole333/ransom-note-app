@@ -8,44 +8,63 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 2| Wireframes / Priority Matrix / Functional Components | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| Pseudocode / actual code | Incomplete
-|Day 5| Initial Clickable Model  | Incomplete
-|Day 6| MVP | Incomplete
-|Day 7| Present | Incomplete
+|Day 1| Project Description | Complete
+|Day 1| Wireframes / Priority Matrix / Functional Components | Complete
+|Day 2| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Day 2| Pseudocode / actual code | Incomplete
+|Day 2| MVP | Incomplete
+|Day 3| Post MVP | Incomplete
+|Day 4| Present | Incomplete
 
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Ransom Note Generator.
+
+App takes user input and converts each letter into a text component, each randomly and legibly styled using the google fonts api and the color scheme api.  The end result is a renderscreen resembling a ransom note which, in a post-mvp version, can be converted to an image file and shared to various social media.
+
+https://drive.google.com/file/d/0B-nmbX0rBb-XcElQMUpheTNGUl9jckV2VFMxUHduUUhfYlVn/view?usp=sharing
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+https://drive.google.com/file/d/0B-nmbX0rBb-Xd1R1cl9mbzBQZFcyZ0Vtb2FrNHc2ZkNoNnBz/view?usp=sharing
+
+Basic wireframe of project MVP.
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
+https://drive.google.com/file/d/0B-nmbX0rBb-XZWxUQW1mekdlN1Z1aXVJMDlpdEEtSmc0OXZz/view?usp=sharing
+
+-Component Structure
+-Input/SetState Methods
+-API calls
+-Landing Screen & About Pages
+-Responsive Design
+-Additional Post-MVP CSS
+-HTML -> IMAGE conversion
+-Social media sharing
+
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### SAMPLE.....
 #### MVP 
 
-- Find and use external api 
-- Render data on page in a list
+- Utilizes two APIs
+	- Google Fonts: https://developers.google.com/fonts/docs/developer_api?apix_params=%7B%22sort%22%3A%22alpha%22%7D
+	- The Color API (schemes): http://www.thecolorapi.com/docs
+- 
 
 #### PostMVP 
 
-- Add data to favorites section
+-Responsive Design
+-Additional Post-MVP CSS
+-HTML -> IMAGE conversion
+-Social media sharing
 
 ## React Architectural Design
 
-Define the the React components and the architectural design of your app.
+https://drive.google.com/file/d/0B-nmbX0rBb-XUkk5MGhYLXdONm04WnlWSTBNVXdOQzM2N3lZ/view?usp=sharing
+Basic Component Heirarchy
 
 #### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
 
@@ -65,8 +84,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 #### SAMPLE.....
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs |
+| API Research and Planning | H | 4rs | 4hrs |
+| Component Structure | H | 2hrs| NA |
+| Input/onChange state setting | H | 2hrs| N/A |
+| Working with APIs | H | 4hrs| NA |
+| CSS Tweaking | M | 4hrs| NA |
+| HTML => Image | L | 3hrs | NA |
+| Social Media Sharing | L | 3hrs | NA |
 | Total | H | 6hrs| 5hrs | 
 
 ## Helper Functions
