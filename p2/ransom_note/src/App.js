@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserInput from "./UserInput.js"
 import './App.css';
 
 class App extends Component {
@@ -6,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Ransom Note</h1>
+        <UserInput />
       </div>
     );
   }
