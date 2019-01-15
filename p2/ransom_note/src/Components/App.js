@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import UserInput from "./UserInput.js"
-import './App.css';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state ={
+      UserInput: ""
+    }
+  }
+  
   render() {
     return (
       <div className="App">
