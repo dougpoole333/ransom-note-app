@@ -16,24 +16,16 @@ body{
   background-color: paleturquoise;
   width: 90%;
   height: 100vh;
-  align-content: center;
   margin: 10px auto;
   display: flex;
+  align-content: center;
   flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
 .word{
   background-color: palegreen;
-  padding: 5px;
-  margin: auto auto;
+  padding: 5px 15px;
+  margin: 10px;
   display: flex;
 }
-
-.letter{
-  background-color: pink;
-  padding: 5px;
-  margin: auto 5px;
-  font-size: 40px;
-}
-
-
