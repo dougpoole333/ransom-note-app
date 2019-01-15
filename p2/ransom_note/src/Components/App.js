@@ -34,7 +34,8 @@ class App extends Component {
           onSubmit={this.handleSubmit}
           onChange={this.handleChange} 
           value={this.state.userInput}/>
-        <RenderScreen />
+        <RenderScreen 
+          letters={this.state.letters}/>
       </div>
     );
   }
