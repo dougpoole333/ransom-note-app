@@ -9,13 +9,22 @@ class App extends Component {
       userInput: "",
       letters: []
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(event){
+    this.setState({
+      [event.target.name]: event.target.value
+    })
   }
 
   render() {
     return (
       <div className="App">
         <h1>Ransom Note</h1>
-        <UserInput />
+        <UserInput
+          onChange={this.handleChange} 
+          value={this.state.userInput}/>
         <RenderScreen />
       </div>
     );

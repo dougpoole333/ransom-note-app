@@ -1,9 +1,13 @@
 import React from "react"
 
-function UserInput(){
+function UserInput(props){
     return(
         <form>
-            <input type="text" name="userInput" value="Your Message Here"/>
+            <input
+                type="text"
+                name="userInput"
+                value={props.value}
+                onChange={props.onChange}/>
             <input type="submit" value="Render"/>
         </form>    
     )
