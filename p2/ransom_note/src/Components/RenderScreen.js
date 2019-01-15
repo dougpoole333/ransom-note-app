@@ -1,20 +1,19 @@
 import React, { Component } from "react"
-import Letter from "./Letter.js"
+import Word from "./Word.js"
 
 class RenderScreen extends Component{
     
     render(){
-        const letterComponents = this.props.letters.map((letter, i) => {
-            if (letter !== " "){
-                return(<Letter key={i} letter={letter} />)
-            } else {return (<div key={i} className="space"></div>)}
+        const wordArray = this.props.words.map((word,i) => {
+            return <Word key={i} word={word} />
         })
         return(
             <div className="render-screen">
-                {letterComponents}
+                {wordArray}
             </div>
         )
     }
+    
 }
 
 export default RenderScreen

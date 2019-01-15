@@ -15,16 +15,18 @@ body{
 .render-screen{
   background-color: paleturquoise;
   width: 90%;
-  height: 100%;
+  height: 100vh;
   align-content: center;
   margin: 10px auto;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
-.space, .letter{
-  height: 10%;
-  width: 10%;
+
+.word{
+  background-color: palegreen;
+  padding: 5px;
+  margin: auto 5px;
   display: inline-block;
-  border: 2px solid none;
 }
+
+

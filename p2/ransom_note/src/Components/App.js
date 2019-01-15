@@ -7,7 +7,7 @@ class App extends Component {
     super()
     this.state ={
       userInput: "",
-      letters: []
+      words: []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -22,7 +22,7 @@ class App extends Component {
   handleSubmit(event){
     event.preventDefault()
     this.setState({
-      letters: [...this.state.userInput]
+      words: this.state.userInput.split(" ")
     })
   }
 
@@ -35,7 +35,7 @@ class App extends Component {
           onChange={this.handleChange} 
           value={this.state.userInput}/>
         <RenderScreen 
-          letters={this.state.letters}/>
+          words={this.state.words}/>
       </div>
     );
   }
