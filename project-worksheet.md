@@ -35,14 +35,14 @@ Basic wireframe of project MVP.
 
 https://drive.google.com/file/d/0B-nmbX0rBb-XZWxUQW1mekdlN1Z1aXVJMDlpdEEtSmc0OXZz/view?usp=sharing
 
--Component Structure
--Input/SetState Methods
--API calls
--Landing Screen & About Pages
--Responsive Design
--Additional Post-MVP CSS
--HTML -> IMAGE conversion
--Social media sharing
+-Component Structure<br>
+-Input/SetState Methods<br>
+-API calls<br>
+-Landing Screen & About Pages<br>
+-Responsive Design<br>
+-Additional Post-MVP CSS<br>
+-HTML -> IMAGE conversion<br>
+-Social media sharing<br>
 
 
 ### MVP/PostMVP - 5min
@@ -55,6 +55,8 @@ https://drive.google.com/file/d/0B-nmbX0rBb-XZWxUQW1mekdlN1Z1aXVJMDlpdEEtSmc0OXZ
 - User text input renders as a collection of letter components, each with unique color and font styling.
 
 #### PostMVP 
+
+https://drive.google.com/file/d/0B-nmbX0rBb-XNWlMQmJrVnRCWmRNMnhBdmMxT00wUEFEdnRJ/view?usp=sharing<br>
 
 -When user clicks a certain letter component, the rest of the text renders with that components styling.<br>
 -Sidebar displaying CSS code 
@@ -105,8 +107,10 @@ Helper functions should be generic enought that they can be reused in other appl
 | Capitalize | This will capitalize the first letter in a string of text | 
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
- 
+
+https://github.com/nfl/react-helmet<br>
+https://github.com/niklasvh/html2canvas<br>
+
  #### SAMPLE.....
 | Library | What it Does | 
 | --- | :---: |  
