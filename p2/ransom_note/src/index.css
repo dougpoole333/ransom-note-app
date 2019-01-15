@@ -25,8 +25,15 @@ body{
 .word{
   background-color: palegreen;
   padding: 5px;
+  margin: auto auto;
+  display: flex;
+}
+
+.letter{
+  background-color: pink;
+  padding: 5px;
   margin: auto 5px;
-  display: inline-block;
+  font-size: 40px;
 }
 
 
