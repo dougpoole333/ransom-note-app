@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserInput from "./UserInput.js"
 import RenderScreen from "./RenderScreen.js"
 import loremIpsum from "./loremIpsum.js"
+import InfoDisplay from "./InfoDisplay.js"
 import axios from "axios"
 
 class App extends Component {
@@ -73,6 +74,7 @@ class App extends Component {
           value={this.state.userInput}/>
         <RenderScreen 
           words={this.state.words} fonts={this.state.fonts}/>
+        <InfoDisplay />
       </div>
     );
   }

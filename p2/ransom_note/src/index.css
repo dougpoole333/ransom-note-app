@@ -13,6 +13,7 @@ body{
   display: block;
   margin-top: 0;
   padding-bottom: 15px;
+  border-bottom: 3px ridge lightgray;
 
 }
 
@@ -32,7 +33,7 @@ body{
   background-image: url("./Images/lined-paper.png");
   width: 500px;
   height: 795px;
-  margin: 10px auto 40px auto;
+  margin: 10px auto 100px auto;
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
@@ -50,4 +51,19 @@ body{
   position: relative;
   display: flex;
   align-items: center
+}
+
+.info-display{
+  position: fixed;
+  height: 230px;
+  width: 100%;
+  bottom: -200px;
+  background-color: black;
+  border-top: 3px ridge lightgray;
+  box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: bottom .5s;
+}
+
+.info-display:hover{
+  bottom: 0;
 }
