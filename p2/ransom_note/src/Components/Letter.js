@@ -14,7 +14,7 @@ class Letter extends Component{
                 textTransform: "",
                 transform: "",
                 display: "inline-block",
-                minWidth: "",
+                minWidth: "30px",
                 fontFamily: "",
         }
     }
