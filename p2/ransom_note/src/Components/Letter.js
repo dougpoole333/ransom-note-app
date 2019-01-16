@@ -46,11 +46,45 @@ class Letter extends Component{
         return `${t}px, ${r}px, ${b}px, ${l}px`
     }
 
+    formatFontForURL = (font) => {
+        return font.replace(" ", "+")
+    }
+
+    returnRandomColor = () => {
+        let r=Math.floor(Math.random()*255)
+        let g=Math.floor(Math.random()*255)
+        let b=Math.floor(Math.random()*255)
+            return [r,g,b]
+    }
+
+    returnRandomGrayscale = () => {
+        let n=Math.floor(Math.random()*255)
+            return [n,n,n]
+    }
+
+    returnRandomFontColor = () => {
+        let array = [this.returnRandomColor(), this.returnRandomGrayscale()]
+        return array[Math.floor(Math.random()*2)]
+    }
+
+    returnCompColor = (array) => {
+       return array.map(el => (el + 122) % 255)
+    }
+
+    formatRGB = (array) => {
+        return "rgb(" + array[0] + "," + array[1] + "," + array[2] +")"
+    }
+
+
+
     componentDidMount(){
+        let fontColor = this.returnRandomFontColor()
+        let backgroundColor = this.returnCompColor(fontColor)
         this.setState({
             fontFamily: "'" + this.props.font.family +"', " + this.props.font.type,
             fontSize: this.returnRandomFontSize(),
-            color: this.props.color,
+            color: this.formatRGB(fontColor),
+            backgroundColor: this.formatRGB(backgroundColor),
             fontStyle: this.returnRandomFontStyle(),
             textTransform: this.returnRandomTextTransform(),
             transform: this.returnRandomTransform(),
@@ -64,7 +98,7 @@ class Letter extends Component{
         return(
             <div>
                 <Helmet>
-                    <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.props.font.family} />  
+                    <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.formatFontForURL(this.props.font.family)} />  
                 </Helmet>
                 <div style={this.state}>
                     {this.props.letter}
