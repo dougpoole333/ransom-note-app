@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import axios from "axios";
+import {Helmet} from "react-helmet"
 
 
 class Letter extends Component{
@@ -62,9 +62,15 @@ class Letter extends Component{
 
     render(){
         return(
-            <div style={this.state}>
-                {this.props.letter}
+            <div>
+                <Helmet>
+                    <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.props.font.family} />  
+                </Helmet>
+                <div style={this.state}>
+                    {this.props.letter}
+                </div>
             </div>
+            
         )
     }
     
