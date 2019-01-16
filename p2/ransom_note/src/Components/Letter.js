@@ -15,6 +15,7 @@ class Letter extends Component{
                 transform: "",
                 display: "inline-block",
                 minWidth: "",
+                fontFamily: "",
         }
     }
 
@@ -24,8 +25,8 @@ class Letter extends Component{
     }
     
     returnRandomFontStyle = () => {
-        let array = ["normal", "italic", "bold"];
-        return array[Math.floor(Math.random()*3)]
+        let array = ["normal", "bold"];
+        return array[Math.floor(Math.random()*2)]
     }
 
     returnRandomTextTransform = () => {
@@ -76,12 +77,11 @@ class Letter extends Component{
     }
 
 
-
     componentDidMount(){
         let fontColor = this.returnRandomFontColor()
         let backgroundColor = this.returnCompColor(fontColor)
         this.setState({
-            fontFamily: "'" + this.props.font.family +"', " + this.props.font.type,
+            fontFamily: this.props.font.family,
             fontSize: this.returnRandomFontSize(),
             color: this.formatRGB(fontColor),
             backgroundColor: this.formatRGB(backgroundColor),
@@ -98,10 +98,10 @@ class Letter extends Component{
         return(
             <div>
                 <Helmet>
-                    <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.formatFontForURL(this.props.font.family)} />  
+                    <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.formatFontForURL(this.state.fontFamily)} />  
                 </Helmet>
                 <div style={this.state}>
-                    {this.props.letter}
+                    {this.props.letter ? this.props.letter : null}
                 </div>
             </div>
             

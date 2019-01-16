@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Ransom Note</h1>
+        <h1 className="title">Ransom Note</h1>
         <UserInput
           onSubmit={this.handleSubmit}
           onChange={this.handleChange} 

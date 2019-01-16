@@ -7,7 +7,8 @@ function UserInput(props){
                 type="text"
                 name="userInput"
                 value={props.value}
-                onChange={props.onChange}/>
+                onChange={props.onChange}
+                placeholder="Enter text here"/>
             <input
                 type="submit"
                 value="Render"/>
