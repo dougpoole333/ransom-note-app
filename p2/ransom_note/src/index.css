@@ -15,18 +15,23 @@ body{
 
 .render-screen{
   background-image: url("./Images/lined-paper.png");
-  width: 644px;
+  width: 500px;
   height: 795px;
   margin: 10px auto;
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
+  background-size: auto 100%;
   overflow-y: scroll;
+  padding-left: 90px;
+  padding-top: 90px;
+  padding-right: 80px;
 }
 
 .word{
   background-color: palegreen;
   margin: 0 10px;
+  position: relative;
   display: flex;
 }
