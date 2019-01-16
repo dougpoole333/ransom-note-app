@@ -6,7 +6,7 @@ body{
   text-align: center;
   height: auto;
   width: 100%;
-  background-color: palegoldenrod;
+  background-image: url("./Images/wooden-desk-top.jpg");
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -30,7 +30,6 @@ body{
 }
 
 .word{
-  background-color: palegreen;
   margin: 0 10px;
   position: relative;
   display: flex;

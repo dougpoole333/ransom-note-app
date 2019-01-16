@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios";
 
-// const COLOR_URL = "http://thecolorapi.com/scheme?hex="
 
 class Letter extends Component{
     constructor(props){
@@ -17,7 +16,7 @@ class Letter extends Component{
                 display: "inline-block",
                 minWidth: "",
         }
-    this.fetchBackgroundColor = this.fetchBackgroundColor.bind(this)
+    // this.fetchBackgroundColor = this.fetchBackgroundColor.bind(this)
     }
 
     returnRandomFontSize = () => {
@@ -48,17 +47,17 @@ class Letter extends Component{
         return `${t}px, ${r}px, ${b}px, ${l}px`
     }
 
-    async fetchBackgroundColor(){
-        const res = await axios("https://cors-anywhere.herokuapp.com/http://thecolorapi.com/scheme?rgb="+this.props.color+"&format=json&mode=analogic-complement&count=2")
-        this.setState({
-            backgroundColor: res.data
-        })
-        console.log(res.data)
-    }
+    // async fetchBackgroundColor(){
+    //     const res = await axios("http://colormind.io/api/" + )
+    //     this.setState({
+    //         backgroundColor: 
+    //     })
+    //     console.log(res.data.colors[0].rgb.value)
+    // }
 
 
     componentDidMount(){
-        this.fetchBackgroundColor()
+        // this.fetchBackgroundColor()
         this.setState({
             fontSize: this.returnRandomFontSize(),
             color: this.props.color,
