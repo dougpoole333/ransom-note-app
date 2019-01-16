@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserInput from "./UserInput.js"
 import RenderScreen from "./RenderScreen.js"
+import loremIpsum from "./loremIpsum.js"
 
 class App extends Component {
   constructor(){
@@ -18,10 +19,19 @@ class App extends Component {
       [event.target.name]: event.target.value
     })
   }
+
+  componentDidUpdate(){
+    if (this.state.userInput === "lorem ipsum") {
+      this.setState({
+        userInput: loremIpsum
+      })
+    }
+  }
   
   handleSubmit(event){
     event.preventDefault()
     this.setState({
+      userInput: "",
       words: this.state.userInput.split(" ")
     })
   }

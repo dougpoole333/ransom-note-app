@@ -25,7 +25,6 @@ body{
 
 .word{
   background-color: palegreen;
-  padding: 5px 15px;
   margin: 10px;
   display: flex;
 }

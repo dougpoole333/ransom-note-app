@@ -5,12 +5,15 @@ class Letter extends Component{
         super(props)
         this.state ={
                 backgroundColor: "white",
-                padding: "5px 5px",
-                margin: "5px 5px",
+                padding: "",
+                margin: "auto 5px",
                 fontSize: "",
                 fontStyle: "",
                 textTransform: "",
-                color: ""
+                color: "",
+                transform: "",
+                display: "inline-block",
+                minWidth: "",
         }
     }
 
@@ -46,13 +49,29 @@ class Letter extends Component{
         return array[Math.floor(Math.random()*2)]
     }
 
+    returnRandomTransform = () => {
+        let n = 8 - Math.floor(Math.random()*16)
+        return `rotate(${n}deg)`
+    }
+
+    returnRandomSpacing = () => {
+        let t = Math.floor(Math.random()*15)+5
+        let r = Math.floor(Math.random()*15)+5
+        let b = Math.floor(Math.random()*15)+5
+        let l = Math.floor(Math.random()*15)+5
+        return `${t}px, ${r}px, ${b}px, ${l}px`
+    }
+
 
     componentDidMount(){
         this.setState({
             fontSize: this.returnRandomFontSize(),
             color: this.returnRandomFontColor(),
             fontStyle: this.returnRandomFontStyle(),
-            textTransform: this.returnRandomTextTransform()
+            textTransform: this.returnRandomTextTransform(),
+            transform: this.returnRandomTransform(),
+            padding: this.returnRandomSpacing(),
+            minWidth: Math.floor(Math.random()*20)+5 + "px"
         })
     }
 
