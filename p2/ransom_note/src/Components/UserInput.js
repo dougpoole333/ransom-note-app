@@ -12,6 +12,10 @@ function UserInput(props){
             <input
                 type="submit"
                 value="Render"/>
+            <input
+                type="button"
+                value="Clear"
+                onClick={props.handleClear}/>
         </form>    
     )
 }

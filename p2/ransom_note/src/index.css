@@ -25,13 +25,14 @@ body{
   flex-direction: column;
   overflow: auto;
   margin: 0;
+  
 }
 
 .render-screen{
   background-image: url("./Images/lined-paper.png");
   width: 500px;
   height: 795px;
-  margin: 10px auto;
+  margin: 10px auto 40px auto;
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
@@ -47,4 +48,5 @@ body{
   margin: 0 10px;
   position: relative;
   display: flex;
+  align-items: center
 }

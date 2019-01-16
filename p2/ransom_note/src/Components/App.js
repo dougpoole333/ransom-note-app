@@ -15,6 +15,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.fetchFonts = this.fetchFonts.bind(this)
+    this.handleClear = this.handleClear.bind(this)
   }
 
   handleChange(event){
@@ -36,6 +37,13 @@ class App extends Component {
     this.setState({
       userInput: "",
       words: this.state.userInput.split(" ")
+    })
+  }
+
+  handleClear(){
+    this.setState({
+      userInput:"",
+      words:[]
     })
   }
 
@@ -61,6 +69,7 @@ class App extends Component {
         <UserInput
           onSubmit={this.handleSubmit}
           onChange={this.handleChange} 
+          handleClear={this.handleClear}
           value={this.state.userInput}/>
         <RenderScreen 
           words={this.state.words} fonts={this.state.fonts}/>
