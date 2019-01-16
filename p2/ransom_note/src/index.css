@@ -36,6 +36,7 @@ body{
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   background-size: auto 100%;
   overflow-y: scroll;

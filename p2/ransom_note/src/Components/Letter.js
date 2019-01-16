@@ -65,7 +65,7 @@ class Letter extends Component{
 
     returnRandomFontColor = () => {
         let array = [this.returnRandomColor(), this.returnRandomGrayscale()]
-        return array[Math.floor(Math.random()*2)]
+        return array[Math.floor(Math.random()*1.5)]
     }
 
     returnCompColor = (array) => {
