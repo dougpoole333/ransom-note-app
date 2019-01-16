@@ -16,7 +16,6 @@ class Letter extends Component{
                 display: "inline-block",
                 minWidth: "",
         }
-    // this.fetchBackgroundColor = this.fetchBackgroundColor.bind(this)
     }
 
     returnRandomFontSize = () => {
@@ -47,19 +46,9 @@ class Letter extends Component{
         return `${t}px, ${r}px, ${b}px, ${l}px`
     }
 
-    // async fetchBackgroundColor(){
-    //     const res = await axios("http://colormind.io/api/" + )
-    //     this.setState({
-    //         backgroundColor: 
-    //     })
-    //     console.log(res.data.colors[0].rgb.value)
-    // }
-
-
     componentDidMount(){
-        // this.fetchBackgroundColor()
         this.setState({
-            fontFamily: this.props.font,
+            fontFamily: "'" + this.props.font.family +"', " + this.props.font.type,
             fontSize: this.returnRandomFontSize(),
             color: this.props.color,
             fontStyle: this.returnRandomFontStyle(),
