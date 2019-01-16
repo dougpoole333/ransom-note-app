@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 import Letter from "./Letter.js"
 
 function Word(props){

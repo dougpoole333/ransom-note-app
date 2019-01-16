@@ -4,27 +4,29 @@ body{
 
 .App {
   text-align: center;
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-color: palegoldenrod;
   display: flex;
   flex-direction: column;
+  overflow: auto;
   margin: 0;
 }
 
 .render-screen{
-  background-color: paleturquoise;
-  width: 90%;
-  height: 100vh;
+  background-image: url("./Images/lined-paper.png");
+  width: 644px;
+  height: 795px;
   margin: 10px auto;
   display: flex;
-  align-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
 
 .word{
   background-color: palegreen;
-  margin: 10px;
+  margin: 0 10px;
   display: flex;
 }
