@@ -10,8 +10,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Functional Components | Complete
-|Day 2| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 2| Pseudocode / actual code | Incomplete
+|Day 2| Core Application Structure (HTML, CSS, etc.) | Complete
+|Day 2| API integration | Incomplete
 |Day 2| MVP | Incomplete
 |Day 3| Post MVP | Incomplete
 |Day 4| Present | Incomplete
@@ -78,10 +78,13 @@ Basic Component Heirarchy
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
 #### SAMPLE.....
-| Component | Description | 
-| --- | :---: |  
-| Header | This will render the header include the nav | 
-| Footer | This will render the header include the nav | 
+| Component | Description |
+| --- | :---: |
+| App | Stores other components, stores user input as state, makes api calls,  - maybe router| 
+| User Input | Controlled text input form | 
+| Render Screen | Pareses user input into words, renders word components |
+| Word | Parses words into letters, renders leter components |
+| Letter | Renders individual letters, applies randomized inline styles |
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
@@ -90,13 +93,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
 | API Research and Planning | H | 4rs | 4hrs |
-| Component Structure | H | 2hrs| NA |
-| Input/onChange state setting | H | 2hrs| N/A |
-| Working with APIs | H | 4hrs| NA |
-| CSS Tweaking | M | 4hrs| NA |
+| Component Structure | H | 2hrs| 3hrs |
+| Input/onChange state setting | H | 2hrs| 2hrs |
+| Working with APIs | H | 4hrs| 1hr |
+| CSS Tweaking | M | 4hrs| 2hrs |
 | HTML => Image | L | 3hrs | NA |
 | Social Media Sharing | L | 3hrs | NA |
-| Total | H | 6hrs| 5hrs | 
+| Total | H | 22hrs| 12hrs | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
