@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import UserInput from "./UserInput.js"
 import RenderScreen from "./RenderScreen.js"
 import loremIpsum from "./loremIpsum.js"
+import axios from "axios"
 
 class App extends Component {
   constructor(){
     super()
     this.state ={
       userInput: "",
-      words: []
+      words: [],
+      fonts: []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.fetchFonts = this.fetchFonts.bind(this)
   }
 
   handleChange(event){
@@ -36,6 +39,21 @@ class App extends Component {
     })
   }
 
+  async fetchFonts(){
+        const res = await axios("https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBCnV1KZwuXRwSuucquMMI-52pkQgSCfbE")
+        let fonts = res.data.items.map((el) => {
+          return {family: el.family, type: el.category}
+        })
+        this.setState({
+          fonts: fonts
+        })
+  }
+
+  componentDidMount(){
+    this.fetchFonts()
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -45,7 +63,7 @@ class App extends Component {
           onChange={this.handleChange} 
           value={this.state.userInput}/>
         <RenderScreen 
-          words={this.state.words}/>
+          words={this.state.words} fonts={this.state.fonts}/>
       </div>
     );
   }

@@ -5,7 +5,7 @@ class RenderScreen extends Component{
     
     render(){
         const wordArray = this.props.words.map((word,i) => {
-            return <Word key={i} word={word} />
+            return <Word key={i} word={word} fonts={this.props.fonts}/>
         })
         return(
             <div className="render-screen">

@@ -59,6 +59,7 @@ class Letter extends Component{
     componentDidMount(){
         // this.fetchBackgroundColor()
         this.setState({
+            fontFamily: this.props.font,
             fontSize: this.returnRandomFontSize(),
             color: this.props.color,
             fontStyle: this.returnRandomFontStyle(),

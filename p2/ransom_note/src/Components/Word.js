@@ -21,7 +21,13 @@ function Word(props){
     }
 
     const letterArray = [...props.word].map((letter,i) => {
-        return(<Letter key={i} letter={letter} color={returnRandomFontColor()}/>)
+        let randFontIndex=Math.floor(Math.random()*900)
+        return(
+        <Letter 
+            key={i} 
+            letter={letter} 
+            color={returnRandomFontColor()} 
+            font={props.fonts[randFontIndex]}/>)
     })
 
     return(
