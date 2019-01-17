@@ -11,7 +11,9 @@ function Word(props){
         <Letter 
             key={i} 
             letter={letter}
-            font={props.fonts[randFontIndex]}/>)
+            font={props.fonts[randFontIndex]}
+            grab={props.grab}
+            hello="hello"/>)
     })
 
     return(

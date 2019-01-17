@@ -6,17 +6,19 @@ import InfoDisplay from "./InfoDisplay.js"
 import axios from "axios"
 
 class App extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state ={
       userInput: "",
       words: [],
-      fonts: []
+      fonts: [],
+      style: {fack: "ten", test: "one"}
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.fetchFonts = this.fetchFonts.bind(this)
     this.handleClear = this.handleClear.bind(this)
+    this.grabStyleInfo = this.grabStyleInfo.bind(this)
   }
 
   handleChange(event){
@@ -44,7 +46,15 @@ class App extends Component {
   handleClear(){
     this.setState({
       userInput:"",
-      words:[]
+      words:[],
+      style: ""
+    })
+  }
+
+  grabStyleInfo(event){
+    console.log(event.target.title)
+    this.setState({
+      style: event.target.title
     })
   }
 
@@ -73,7 +83,7 @@ class App extends Component {
           handleClear={this.handleClear}
           value={this.state.userInput}/>
         <RenderScreen 
-          words={this.state.words} fonts={this.state.fonts}/>
+          words={this.state.words} fonts={this.state.fonts} grab={this.grabStyleInfo}/>
         <InfoDisplay />
       </div>
     );

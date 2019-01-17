@@ -100,7 +100,7 @@ class Letter extends Component{
                 <Helmet>
                     <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.formatFontForURL(this.state.fontFamily)} />  
                 </Helmet>
-                <div style={this.state}>
+                <div style={this.state} title={this.props.font.family} onClick={this.props.grab}>
                     {this.props.letter ? this.props.letter : null}
                 </div>
             </div>
