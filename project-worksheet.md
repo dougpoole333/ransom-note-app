@@ -11,8 +11,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Functional Components | Complete
 |Day 2| Core Application Structure (HTML, CSS, etc.) | Complete
-|Day 2| API integration | Incomplete
-|Day 2| MVP | Incomplete
+|Day 2| API integration | Complete	
+|Day 2| MVP | Complete
 |Day 3| Post MVP | Incomplete
 |Day 4| Present | Incomplete
 
@@ -85,6 +85,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Render Screen | Pareses user input into words, renders word components |
 | Word | Parses words into letters, renders leter components |
 | Letter | Renders individual letters, applies randomized inline styles |
+| Info Display | Displays style properties of selected letter |
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
@@ -95,11 +96,12 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | API Research and Planning | H | 4rs | 4hrs |
 | Component Structure | H | 2hrs| 3hrs |
 | Input/onChange state setting | H | 2hrs| 2hrs |
-| Working with APIs | H | 4hrs| 1hr |
-| CSS Tweaking | M | 4hrs| 2hrs |
+| Working with APIs | H | 4hrs| 4hr |
+| CSS Tweaking | M | 4hrs| 4hrs |
+| Info Display | L | 4hrs | 4hrs
 | HTML => Image | L | 3hrs | NA |
 | Social Media Sharing | L | 3hrs | NA |
-| Total | H | 22hrs| 12hrs | 
+| Total | H | 26hrs| 21hrs | 
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
