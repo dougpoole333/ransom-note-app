@@ -12,7 +12,7 @@ class App extends Component {
       userInput: "",
       words: [],
       fonts: [],
-      style: ""
+      infoDisplay: ""
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -54,9 +54,8 @@ class App extends Component {
 
   grabStyleInfo(event){
     event.preventDefault()
-    console.log(event.currentTarget.title)
     this.setState({
-      style: event.currentTarget.title
+      infoDisplay: event.currentTarget.title
     })
   }
 
@@ -86,7 +85,7 @@ class App extends Component {
           value={this.state.userInput}/>
         <RenderScreen 
           words={this.state.words} fonts={this.state.fonts} grab={this.grabStyleInfo}/>
-        <InfoDisplay />
+        <InfoDisplay display={this.state.infoDisplay}/>
       </div>
     );
   }

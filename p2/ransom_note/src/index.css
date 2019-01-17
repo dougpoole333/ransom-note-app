@@ -78,3 +78,11 @@ body{
 .info-display:hover{
   bottom: 0;
 }
+
+.display-window{
+  background-color: white;
+  height: 100px;
+  width: 60%;
+  border: 3px inset lightgray;
+  margin: 10px;
+}
