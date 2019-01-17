@@ -51,40 +51,18 @@ class Letter extends Component{
         return font.replace(" ", "+")
     }
 
-    returnRandomColor = () => {
-        let r=Math.floor(Math.random()*255)
-        let g=Math.floor(Math.random()*255)
-        let b=Math.floor(Math.random()*255)
-            return [r,g,b]
-    }
-
-    returnRandomGrayscale = () => {
-        let n=Math.floor(Math.random()*255)
-            return [n,n,n]
-    }
-
-    returnRandomFontColor = () => {
-        let array = [this.returnRandomColor(), this.returnRandomGrayscale()]
-        return array[Math.floor(Math.random()*1.5)]
-    }
-
-    returnCompColor = (array) => {
-       return array.map(el => (el + 122) % 255)
-    }
-
     formatRGB = (array) => {
         return "rgb(" + array[0] + "," + array[1] + "," + array[2] +")"
     }
 
+    
 
     componentDidMount(){
-        let fontColor = this.returnRandomFontColor()
-        let backgroundColor = this.returnCompColor(fontColor)
         this.setState({
             fontFamily: this.props.font.family,
             fontSize: this.returnRandomFontSize(),
-            color: this.formatRGB(fontColor),
-            backgroundColor: this.formatRGB(backgroundColor),
+            color: this.formatRGB(this.props.color),
+            backgroundColor: this.formatRGB(this.props.backgroundColor),
             fontStyle: this.returnRandomFontStyle(),
             textTransform: this.returnRandomTextTransform(),
             transform: this.returnRandomTransform(),
@@ -100,7 +78,7 @@ class Letter extends Component{
                 <Helmet>
                     <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.formatFontForURL(this.state.fontFamily)} />  
                 </Helmet>
-                <div style={this.state} title={this.props.font.family} onClick={this.props.grab}>
+                <div style={this.state} title={[this.state.fontFamily, this.state.color, this.state.backgroundColor]} onClick={this.props.grab}>
                     {this.props.letter ? this.props.letter : null}
                 </div>
             </div>

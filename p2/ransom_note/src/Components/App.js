@@ -12,7 +12,7 @@ class App extends Component {
       userInput: "",
       words: [],
       fonts: [],
-      style: {fack: "ten", test: "one"}
+      style: ""
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -39,7 +39,8 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       userInput: "",
-      words: this.state.userInput.split(" ")
+      words: this.state.userInput.split(" "),
+      style: ""
     })
   }
 
@@ -52,9 +53,10 @@ class App extends Component {
   }
 
   grabStyleInfo(event){
-    console.log(event.target.title)
+    event.preventDefault()
+    console.log(event.currentTarget.title)
     this.setState({
-      style: event.target.title
+      style: event.currentTarget.title
     })
   }
 
