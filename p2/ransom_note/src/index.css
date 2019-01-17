@@ -2,7 +2,7 @@ body{
   margin: 0;
 }
 
-.title{
+.title,.info-header{
   font-family: 'Audiowide', cursive;
   background-color: black;
   color: white;
@@ -12,9 +12,20 @@ body{
   position: relative;
   display: block;
   margin-top: 0;
+}
+
+.title{
+  font-size: 36px;
   padding-bottom: 15px;
   border-bottom: 3px ridge lightgray;
+}
 
+.info-header{
+  font-size: 22px;
+  border-bottom: 1px solid white;
+}
+.info-header:active{
+  color: lightcoral;
 }
 
 .App {
