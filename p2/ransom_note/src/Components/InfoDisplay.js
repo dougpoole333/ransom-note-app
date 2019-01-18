@@ -35,6 +35,40 @@ class InfoDisplay extends Component{
             })
         }
     }
+    formatFontForURL = (font) => {
+        return font.replace(/ /g,"+")
+    }
+
+    codeDisplay = () => {
+        if(this.state.fontFamily){
+            return(
+                <div className="code">
+                    font-family: "{this.state.fontFamily}", {this.state.fontType};<br />                              
+                    color: {this.state.color}<br/>
+                    background-color: {this.state.backgroundColor};
+                </div>
+            )
+        } else {
+            return(
+                <div className="code">Enter text and click a letter to view CSS styling</div>
+            ) 
+        }
+    }
+    headDisplay = () => {
+        let linkText= `<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=` + this.formatFontForURL(this.state.fontFamily) + `">`
+        if(this.state.fontFamily){
+            return(
+                <div className="head-link">
+                    {linkText}
+                </div>   
+            )
+        } else {
+            return(
+                <div className="head-link">Enter text and click a letter to view HTML head link tag</div>   
+            ) 
+        }
+    }
+
 
     render(){
         let textStyle={
@@ -42,15 +76,6 @@ class InfoDisplay extends Component{
             "color": this.state.color,
             "backgroundColor": this.state.backgroundColor,
             "fontSize": "30px"
-        }
-        let codeStyle={
-            "fontFamily": "Courier, 'New Courier', monospace",
-            "color": "green",
-            "backgroundColor": "black",
-            "border": "3px inset gray",
-            "height": "100px",
-            "width": "45%",
-            "textAlign": "left"
         }
         return(
             <div
@@ -60,15 +85,12 @@ class InfoDisplay extends Component{
                     className="info-header"
                     onClick={this.toggleDisplayOpen}>STYLE INFO</h1>
                 <div className="info-container">
-                    <div className="code" style={codeStyle}>
-                        font-family: "{this.state.fontFamily}", {this.state.fontType};<br />                                
-                        color: {this.state.color};<br />
-                        background-color: {this.state.backgroundColor};
-                    </div>
+                    {this.codeDisplay()}
                     <div className="info-text" style={textStyle}>
                         {this.props.words.map(word => word+" ")}
                     </div>
-                </div>   
+                </div>
+                {this.headDisplay()} 
             </div>
         )
     }

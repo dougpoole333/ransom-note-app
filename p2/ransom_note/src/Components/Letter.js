@@ -49,7 +49,7 @@ class Letter extends Component{
     }
 
     formatFontForURL = (font) => {
-        return font.replace(" ", "+")
+        return font.replace(/ /g, "+")
     }
 
     formatRGB = (array) => {

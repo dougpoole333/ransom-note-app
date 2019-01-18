@@ -85,9 +85,36 @@ body{
 }
 
 .display-window, .info-text{
-  background-color: white;
+  background-color: black;
   height: 100px;
   width: 45%;
-  border: 3px inset lightgray;
+  border: 3px inset gray;
   margin: 10px;
+  padding: 5px;
+  text-align: left;
+  overflow: auto;
+}
+
+.head-link{
+  background-color: black;
+  height: 20px;
+  width: auto;
+  border: 3px inset gray;
+  margin: 0 15px;
+  padding: 5px;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  color: green;
+}
+
+.code{
+    font-family: 'Courier New', monospace;
+    color: green;
+    background-color: black;
+    border: 3px inset gray;
+    height: 100px;
+    width: 45%;
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
 }
