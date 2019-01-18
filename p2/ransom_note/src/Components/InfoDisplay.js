@@ -44,7 +44,7 @@ class InfoDisplay extends Component{
             return(
                 <div className="code">
                     font-family: "{this.state.fontFamily}", {this.state.fontType};<br />                              
-                    color: {this.state.color}<br/>
+                    color: {this.state.color};<br/>
                     background-color: {this.state.backgroundColor};
                 </div>
             )

@@ -93,6 +93,7 @@ body{
   padding: 5px;
   text-align: left;
   overflow: auto;
+  transition: color 1s, background-color 1s;
 }
 
 .head-link{
