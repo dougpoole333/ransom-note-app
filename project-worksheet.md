@@ -68,8 +68,12 @@ https://drive.google.com/file/d/0B-nmbX0rBb-XNWlMQmJrVnRCWmRNMnhBdmMxT00wUEFEdnR
 
 ## React Architectural Design
 
-https://drive.google.com/file/d/0B-nmbX0rBb-XUkk5MGhYLXdONm04WnlWSTBNVXdOQzM2N3lZ/view?usp=sharing
-Basic Component Heirarchy
+https://drive.google.com/file/d/0B-nmbX0rBb-XUkk5MGhYLXdONm04WnlWSTBNVXdOQzM2N3lZ/view?usp=sharing<br>
+Basic Component Heirarchy<br>
+<br>
+https://drive.google.com/file/d/0B-nmbX0rBb-XRmdQc2daRVhNNkpaYkR6TUthSEljTFpicHBn/view?usp=sharing<br>
+Updated Component Heirarchy<br>
+<br>
 
 #### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
 
