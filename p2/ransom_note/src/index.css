@@ -69,20 +69,25 @@ body{
   height: 230px;
   width: 100%;
   bottom: -200px;
-  background-color: black;
+  background-color: rgba(0,0,0,.8);
   border-top: 3px ridge lightgray;
   box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.3);
   transition: bottom .5s;
+}
+
+.info-container{
+  display: flex;
+  justify-content: space-around
 }
 
 .info-display:hover{
   bottom: 0;
 }
 
-.display-window{
+.display-window, .info-text{
   background-color: white;
   height: 100px;
-  width: 60%;
+  width: 45%;
   border: 3px inset lightgray;
   margin: 10px;
 }

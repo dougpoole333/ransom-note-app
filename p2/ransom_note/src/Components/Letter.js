@@ -16,6 +16,7 @@ class Letter extends Component{
                 display: "inline-block",
                 minWidth: "30px",
                 fontFamily: "",
+                type: ""
         }
     }
 
@@ -67,7 +68,8 @@ class Letter extends Component{
             textTransform: this.returnRandomTextTransform(),
             transform: this.returnRandomTransform(),
             padding: this.returnRandomSpacing(),
-            minWidth: Math.floor(Math.random()*20)+5 + "px"
+            minWidth: Math.floor(Math.random()*20)+5 + "px",
+            type: this.props.font.type
         })
     }
 
@@ -78,7 +80,7 @@ class Letter extends Component{
                 <Helmet>
                     <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family="+this.formatFontForURL(this.state.fontFamily)} />  
                 </Helmet>
-                <div style={this.state} title={[this.state.fontFamily, this.state.color, this.state.backgroundColor]} onClick={this.props.grab}>
+                <div style={this.state} title={[this.state.fontFamily, this.state.color, this.state.backgroundColor, this.state.type]} onClick={this.props.grab}>
                     {this.props.letter ? this.props.letter : null}
                 </div>
             </div>

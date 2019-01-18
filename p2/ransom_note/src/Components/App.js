@@ -85,7 +85,7 @@ class App extends Component {
           value={this.state.userInput}/>
         <RenderScreen 
           words={this.state.words} fonts={this.state.fonts} grab={this.grabStyleInfo}/>
-        <InfoDisplay display={this.state.infoDisplay}/>
+        <InfoDisplay display={this.state.infoDisplay} words={this.state.words}/>
       </div>
     );
   }

@@ -7,7 +7,8 @@ class InfoDisplay extends Component{
             open: false,
             fontFamily: "",
             color: "",
-            backgroundColor: ""
+            backgroundColor: "",
+            fontType: "",
             
         }
     }
@@ -19,7 +20,7 @@ class InfoDisplay extends Component{
 
     parseDisplayString = (string) => {
        let split = string.split(",")
-       let merge = [split[0], split[1]+ "," + split[2]+","+split[3], split[4]+ "," + split[5]+","+split[6]]
+       let merge = [split[0], split[1]+ "," + split[2]+","+split[3], split[4]+ "," + split[5]+","+split[6], split[7]]
        return merge
     }
 
@@ -29,12 +30,28 @@ class InfoDisplay extends Component{
             this.setState({
                 fontFamily: array[0],
                 color: array[1],
-                backgroundColor: array[2]
+                backgroundColor: array[2],
+                fontType: array[3]
             })
         }
     }
 
     render(){
+        let textStyle={
+            "fontFamily": this.state.fontFamily,
+            "color": this.state.color,
+            "backgroundColor": this.state.backgroundColor,
+            "fontSize": "30px"
+        }
+        let codeStyle={
+            "fontFamily": "Courier, 'New Courier', monospace",
+            "color": "green",
+            "backgroundColor": "black",
+            "border": "3px inset gray",
+            "height": "100px",
+            "width": "45%",
+            "textAlign": "left"
+        }
         return(
             <div
                 className="info-display"
@@ -42,12 +59,16 @@ class InfoDisplay extends Component{
                 <h1 
                     className="info-header"
                     onClick={this.toggleDisplayOpen}>STYLE INFO</h1>
-                <div className="display-window">
-                    {this.state.fontFamily}<br/>
-                    {this.state.color}<br/>
-                    {this.state.backgroundColor}
-                    
-                </div>
+                <div className="info-container">
+                    <div className="code" style={codeStyle}>
+                        font-family: "{this.state.fontFamily}", {this.state.fontType};<br />                                
+                        color: {this.state.color};<br />
+                        background-color: {this.state.backgroundColor};
+                    </div>
+                    <div className="info-text" style={textStyle}>
+                        {this.props.words.map(word => word+" ")}
+                    </div>
+                </div>   
             </div>
         )
     }
